@@ -1,0 +1,6 @@
+services:
+  proyectosgradoapi:
+    image: ${DOCKER_REGISTRY-}proyectosgradoapi
+    build:
+      context: .
+      dockerfile: ProyectosGradoApi/Dockerfile
