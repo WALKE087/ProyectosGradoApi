@@ -1,0 +1,8 @@
+@ProyectosGradoApi_HostAddress = http://localhost:5043
+
+GET {{ProyectosGradoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{ProyectosGradoApi_HostAddress}}/configuracion/
+Accept: application/json
