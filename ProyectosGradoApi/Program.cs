@@ -46,7 +46,7 @@ if (app.Environment.IsDevelopment())
     app.UseCors("AllowAnyOrigin");
 }
 
-app.Urls.Add("http://+:8080");
+app.Urls.Add("https://+:8080");
 
 app.UseHttpsRedirection();
 
