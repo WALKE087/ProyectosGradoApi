@@ -24,9 +24,9 @@ var postgresSettings = builder.Configuration
     .GetSection("secreto")
     .Get<PostgresSettings>();
 
-var connectionString = $"Host={postgresSettings.Host};Port={postgresSettings.Port};" +
-                       $"Database={postgresSettings.Database};Username={postgresSettings.Username};" +
-                       $"Password={postgresSettings.Password}";
+var connectionString = $"Host={postgresSettings?.Host};Port={postgresSettings?.Port};" +
+                       $"Database={postgresSettings?.Database};Username={postgresSettings?.Username};" +
+                       $"Password={postgresSettings?.Password}";
 
 // Configurar DbContext
 builder.Services.AddDbContext<RepositoryDbContext>(options =>
