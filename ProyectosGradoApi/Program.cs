@@ -65,7 +65,9 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    app.MapGet("/index.html", () => Results.Redirect("/swagger"));
 }
 
 if (app.Environment!.IsDevelopment())
