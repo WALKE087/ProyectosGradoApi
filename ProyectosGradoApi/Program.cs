@@ -45,6 +45,13 @@ if (app.Environment.IsDevelopment())
     app.MapGet("/index.html", () => Results.Redirect("/swagger"));
     app.UseCors("AllowAnyOrigin");
 }
+else
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    app.MapGet("/index.html", () => Results.Redirect("/swagger"));
+    app.UseCors("AllowAnyOrigin");
+}
 
 if (app.Environment!.IsDevelopment())
 {
